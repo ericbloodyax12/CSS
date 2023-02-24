@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+header {
+    background-color: rgba(135, 206, 235, 0.5);
+    border-left: 2px solid blue;
+    padding: 10px 5px;
+}
+a {
+    padding: 2rem;
+    text-decoration: none;
+    font-size: 4rem;
+}
+a:active {
+    color: yellow;
+
+}
+a:hover {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 20px #ff99cc,
+    -2px 1px 30px #ff99cc;
+}
