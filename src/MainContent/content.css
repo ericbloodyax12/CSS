@@ -1,0 +1,17 @@
+.content-container {
+    background-color: #ff99cc;
+    height: calc(100% - 45px - 10% );
+}
+.height-width-test2,.height-width-test1{
+    margin: 20px 0px;
+
+    padding: 10px ;
+    max-width: 700px;
+}
+.height-width-test1 {
+    background-color: tomato;
+}
+.height-width-test2 {
+    background-color: navajowhite;
+    box-sizing: content-box;
+}

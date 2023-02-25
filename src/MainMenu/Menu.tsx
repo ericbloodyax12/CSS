@@ -4,7 +4,7 @@ import './menu.css';
 function Menu(props:any) {
 
     return (
-        <div>
+        <div className={'main-container-header'}>
             <header className='nav-panel' id={"h1"}>
                 <a href="#">home</a>
                 <a href="#">my friends</a>

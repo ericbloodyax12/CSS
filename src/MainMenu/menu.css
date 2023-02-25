@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+.main-container-header {
+    height: 45px;
+}
 header {
     background-color: rgba(135, 206, 235, 0.5);
     border-left: 2px solid blue;
     padding: 10px 5px;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
 }
 a {
     padding: 2rem;
     text-decoration: none;
     font-size: 4rem;
+    white-space: nowrap;
 }
 a:active {
     color: yellow;
