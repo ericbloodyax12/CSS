@@ -10,9 +10,9 @@ type PropsType = {
 function App() {
     return (
         <div className="App">
-            <Menu/>
-            <Content/>
             <Footer/>
+            <Content/>
+            <Menu/>
         </div>
     );
 }
