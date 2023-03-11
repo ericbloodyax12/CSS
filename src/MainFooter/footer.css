@@ -1,4 +1,4 @@
 .footer-container {
     background-color: skyblue;
-    height: 10%;
+    height: var(--fotter-height);
 }

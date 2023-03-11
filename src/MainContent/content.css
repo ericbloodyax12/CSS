@@ -1,6 +1,6 @@
 .content-container {
     background-color: #ff99cc;
-    height: calc(100% - 45px - 10% );
+    height: calc(100% - var(--header-height) - var(--fotter-height) );
 }
 .height-width-test2,.height-width-test1{
     margin: 20px 0px;

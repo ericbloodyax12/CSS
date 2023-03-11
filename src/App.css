@@ -1,3 +1,9 @@
 .App {
 height: 100%;
+
 }
+:root {
+    --header-height: 10rem;
+    --fotter-height: 5rem;
+}
+
