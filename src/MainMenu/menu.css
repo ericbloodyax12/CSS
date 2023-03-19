@@ -2,8 +2,9 @@
 .header {
     /*height: var(--header-height);*/
     grid-area: header;
+    background-color: darkblue;
 }
-.container {
+.menu-container {
     background-color: rgba(135, 206, 235, 0.5);
     padding: 10px 5px;
     height: 100%;
@@ -32,7 +33,7 @@
 }
 .item:nth-child(2) {
     flex-shrink: 3;
-    order: 1;
+
 }
 .item:active {
     color: yellow;
@@ -58,12 +59,15 @@
 .invisible:hover {
     cursor: pointer;
 }
+.menu-container > li:last-child {
+    color: #ffffff;
+}
 
 @media (max-width: 850px) {
     .header {
         grid-area: footer;
     }
-    .container {
+    .menu-container {
         display: none;
     }
     .invisible {
