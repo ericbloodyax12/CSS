@@ -11,23 +11,23 @@ function Content(props: PropsType) {
 
     return (
         <div className={'content-container'}>
-            <ReflexContainer orientation="vertical">
+            {/*<ReflexContainer orientation="vertical">*/}
 
-                <ReflexElement className="left-pane">
+                {/*<ReflexElement className="left-pane">*/}
                     <div className="pane-content">
                         Left Pane (resizeable)
                     </div>
-                </ReflexElement>
+                {/*</ReflexElement>*/}
 
-                <ReflexSplitter/>
+                {/*<ReflexSplitter/>*/}
 
-                <ReflexElement className="right-pane">
+                {/*<ReflexElement className="right-pane">*/}
                     <div className="pane-content">
                         Right Pane (resizeable)
                     </div>
-                </ReflexElement>
+                {/*</ReflexElement>*/}
 
-            </ReflexContainer>
+            {/*</ReflexContainer>*/}
         </div>
     );
 }

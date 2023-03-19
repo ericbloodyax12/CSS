@@ -1,6 +1,7 @@
 .content-container {
     background-color: #ff99cc;
-    height: calc(100% - var(--header-height) - var(--fotter-height) );
+    /*height: calc(100% - var(--header-height) - var(--fotter-height) );*/
+    grid-area: content;
 }
 .height-width-test2,.height-width-test1{
     margin: 20px 0px;

@@ -1,4 +1,11 @@
 .footer-container {
     background-color: skyblue;
-    height: var(--fotter-height);
+    /*height: var(--fotter-height);*/
+    grid-area: footer;
+}
+
+@media (max-width: 850px) {
+    .footer-container {
+        grid-area: header;
+    }
 }

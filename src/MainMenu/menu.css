@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 .header {
-    height: var(--header-height);
-
+    /*height: var(--header-height);*/
+    grid-area: header;
 }
 .container {
     background-color: rgba(135, 206, 235, 0.5);
@@ -17,7 +17,6 @@
 
     gap: 10px 10px;
 }
-
 .item {
     list-style-type: none ;
     background-color: #ff99cc;
@@ -30,14 +29,11 @@
     order: 0;
     flex-basis: 20rem;
     flex-shrink: 1;
-
 }
 .item:nth-child(2) {
     flex-shrink: 3;
     order: 1;
-    align-self: stretch;
-    }
-
+}
 .item:active {
     color: yellow;
 
@@ -64,6 +60,9 @@
 }
 
 @media (max-width: 850px) {
+    .header {
+        grid-area: footer;
+    }
     .container {
         display: none;
     }
