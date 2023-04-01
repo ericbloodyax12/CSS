@@ -1,0 +1,11 @@
+@import "./src/common styles/commonStyles";
+.content-container {
+    /*height: calc(100% - var(--header-height) - var(--fotter-height) );*/
+    grid-area: content;
+
+    span {
+        background-color: #ff99cc;
+    }
+}
+
+

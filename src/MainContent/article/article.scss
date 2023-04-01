@@ -1,0 +1,22 @@
+@import "./src/common styles/commonStyles";
+
+.article {
+  width: 600px;
+  background-color: #ff99cc;
+  padding: 2rem;
+  margin: 1rem;
+
+  .article__title {
+    @include article__title($warning:true);
+  }
+
+  .warning.article__title {
+
+    @include article__title($warning:false);
+  }
+
+  .article__text {
+    @include article__text;
+  }
+}
+

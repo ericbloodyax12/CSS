@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.header {
+
+  grid-area: header;
+  background-color: darkblue;
+
+  .menu-container {
+    background-color: rgba(135, 206, 235, 0.5);
+    padding: 10px 5px;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 10px 10px;
+
+    .item {
+      list-style-type: none;
+      background-color: #ff99cc;
+      padding: 0rem 2rem;
+      text-decoration: none;
+      font-size: 3rem;
+      white-space: nowrap;
+      display: block;
+
+      order: 0;
+      flex-basis: 20rem;
+      flex-shrink: 1;
+
+    }
+
+    .item:hover {
+      color: green;
+      cursor: pointer;
+      /*cursor:url("./logo/rsz_jessi.png"), auto;*/
+    }
+
+    .item:nth-child(2) {
+      flex-shrink: 3;
+
+    }
+
+    .item:active {
+      color: yellow;
+
+    }
+  }
+
+  .invisible {
+    display: none;
+    .mobile-menu {
+      border-bottom: 5px solid black;
+      height: 10px;
+      width: 30px;
+    }
+
+    .menu-container > li:last-child {
+      color: #ffffff;
+    }
+  }
+
+  .invisible:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 850px) {
+  .header {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .menu-container {
+      display: none;
+    }
+
+    .invisible {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+
+@mixin article__title ($warning: false)  {
+    @if $warning {
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            color: chartreuse;
+            margin-bottom:  2rem;
+        }
+    } @else {
+        h2 {
+            color: red;
+        }
+    }
+
+}
+@mixin article__text  {
+    p {
+        text-indent: 50px;
+        text-align: justify;
+        letter-spacing: 3px;
+    }
+}
