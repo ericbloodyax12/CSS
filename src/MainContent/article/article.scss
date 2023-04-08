@@ -1,11 +1,27 @@
 @import "./src/common styles/commonStyles";
 
 .article {
-  width: 600px;
-  background-color: #ff99cc;
-  padding: 2rem;
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #006400;
+  padding: 1rem;
+  text-align: center;
+  gap: 1rem;
+  //background-color: green;
+  //padding: 1rem;
+  //text-align: center;
+  //display: flex;
+  //flex-direction: column;
+  //gap: 1rem;
 
+  .article-content {
+    overflow: auto;
+   width: 30rem;
+    height: 25rem;
+    color: #ffffff;
+    background-color: rgba(90, 253, 71, 0.5);
+    font-size: 2.5rem;
+  }
   .article__title {
     @include article__title($warning:true);
   }
@@ -15,8 +31,10 @@
     @include article__title($warning:false);
   }
 
-  .article__text {
-    @include article__text;
+  .article__actions {
+    background-color: #5cfc5c;
+
   }
+
 }
 

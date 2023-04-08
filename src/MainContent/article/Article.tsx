@@ -1,32 +1,39 @@
 import React from 'react';
 import "./article.scss";
+import {log} from "util";
+import {Button} from "./button/Button";
+import {Modal} from "../../Components/Modal";
 
-
-type ArticlePropsType = {
-    title?: string
+export type ArticlePropsType = {
     isWarning: boolean
+    id: number
+    buttonText: string
+    text: string
+    title: string
+    img: string
 }
 
-export function Article(props:ArticlePropsType) {
+export function Article(props: ArticlePropsType) {
     let articleTitleClassName = props.isWarning
         ? "article__title warning"
         : "article__title";
 
     return (
+
         <div className={"article"}>
-            <div className={articleTitleClassName}>
-                <h2>Text Formatting</h2>
-            </div>
-            <div className={"article__text"}>
-                <p >
-                    This text is styled with some of the text formatting
-                    properties. The heading uses the text-align,
-                    text-transform, and color properties.
-                    The paragraph is indented, aligned, and the space between
-                    characters is specified. The underline is removed from
-                    this colored "Try it Yourself" link
+            <div className={"article-content"}>
+                <div className={articleTitleClassName}>
+                    <h2>{props.title}</h2>
+                </div>
+                <p>
+                    {props.text}
                 </p>
             </div>
+            <div className={"article__actions"}>
+                <Button id={props.id} buttonText={props.buttonText} title={props.title}/>
+            </div>
+            <Modal id={props.id} text={props.text} img={props.img} />
         </div>
+
     );
 }

@@ -1,3 +1,5 @@
+$scroll-color: rgb(162, 168, 169);
+
 .App {
     height: 100%;
     display: grid;
@@ -21,4 +23,11 @@
         /*"content"*/
         /*"footer";*/
     }
+}
+*::-webkit-scrollbar {
+    width: 6px;
+    background-color: $scroll-color;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: darken($scroll-color,20%);
 }

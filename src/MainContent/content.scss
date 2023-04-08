@@ -1,11 +1,17 @@
 @import "./src/common styles/commonStyles";
-.content-container {
-    /*height: calc(100% - var(--header-height) - var(--fotter-height) );*/
-    grid-area: content;
 
-    span {
-        background-color: #ff99cc;
-    }
+.content-container {
+  /*height: calc(100% - var(--header-height) - var(--fotter-height) );*/
+  .articles-blocks {
+    height: max-content;
+    width: 100%;
+    background-color: grey;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 

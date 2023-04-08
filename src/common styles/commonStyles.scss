@@ -4,12 +4,12 @@
         h2 {
             text-align: center;
             text-transform: uppercase;
-            color: chartreuse;
+            color: #0a3800;
             margin-bottom:  2rem;
         }
     } @else {
         h2 {
-            color: red;
+            color: #c92020;
         }
     }
 
@@ -21,3 +21,10 @@
         letter-spacing: 3px;
     }
 }
+
+@mixin text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
