@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {Dispatch} from 'react';
 import "./article.scss";
 import {log} from "util";
-import {Button} from "./button/Button";
+
 import {Modal} from "../../Components/Modal";
+import {Button} from "../button/Button";
+import {ActionArticleType} from "../../state/article-reducer";
 
 export type ArticlePropsType = {
     isWarning: boolean
@@ -11,6 +13,7 @@ export type ArticlePropsType = {
     text: string
     title: string
     img: string
+    dispatch: Dispatch<ActionArticleType>
 }
 
 export function Article(props: ArticlePropsType) {
@@ -32,7 +35,7 @@ export function Article(props: ArticlePropsType) {
             <div className={"article__actions"}>
                 <Button id={props.id} buttonText={props.buttonText} title={props.title}/>
             </div>
-            <Modal id={props.id} text={props.text} img={props.img} />
+            <Modal id={props.id} text={props.text} img={props.img} dispatch={props.dispatch} title={props.title} />
         </div>
 
     );

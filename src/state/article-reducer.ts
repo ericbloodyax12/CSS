@@ -7,7 +7,7 @@ const CHANGE_TEXT = "CHANGE_TEXT";
 
 type changeTitleActionType = ReturnType<typeof changeTitleAC>;
 type changeTextActionType = ReturnType<typeof changeTextAC>;
-type ActionArticleType = changeTitleActionType | changeTextActionType;
+export type ActionArticleType = changeTitleActionType | changeTextActionType;
 export const articleReducer = (state: articlesInfoType, action: ActionArticleType): articlesInfoType => {
     switch (action.type) {
         case CHANGE_TITLE: {

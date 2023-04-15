@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.scss';
-import Menu from "./MainMenu/Menu";
-import Content from "./MainContent/Content";
-import Footer from "./MainFooter/Footer";
+import Menu from "./mainlayout/header/Menu";
+import Content from "./mainlayout/main content/Content";
+import Footer from "./mainlayout/MainFooter/Footer";
+
 
 type PropsType = {
     name?: string;
