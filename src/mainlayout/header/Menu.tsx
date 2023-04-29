@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {Dispatch, memo, SetStateAction} from 'react';
 import './menu.scss';
 
-function Menu(props: any) {
+type MenuPropsType = {
+    count:number
+   inc:(count:number)=> void
+}
+
+function Menu(props: MenuPropsType) {
     const menuItemsTxt = ["home", "my friends", "my messages", "my activity", "photos"]
     const itemsJSX = menuItemsTxt.map((el, index) => {
         let lastElIcon = (menuItemsTxt.length - 1 === index) ?
@@ -9,15 +14,15 @@ function Menu(props: any) {
         return <li
             key={index}
             className={"item"}
-
         >
             {lastElIcon} {el}
         </li>
     })
+    console.log("rerender Menu")
     return (
             <header className={'header'}>
                 <ul className='menu-container'>
-                    {itemsJSX}
+                    <div> {props.count} </div> <button onClick={(e)=> props.inc(props.count)}>+</button> {itemsJSX}
                 </ul>
 
                 <div className="invisible">
@@ -30,4 +35,4 @@ function Menu(props: any) {
     );
 }
 
-export default Menu;
+export const MemoizedMenu = memo(Menu) ;

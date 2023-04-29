@@ -11,7 +11,16 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    img {
+      width: 100px;
+      height: 100%;
+    }
+    .articles-blocks__button {
+      @include button-success("articles-blocks");
+      align-self: start;
+    }
   }
 }
+
 
 
