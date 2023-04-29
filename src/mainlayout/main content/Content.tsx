@@ -2,17 +2,17 @@ import React, {Dispatch, memo, SetStateAction, useReducer} from 'react';
 import 'react-reflex/styles.css';
 import './content.scss';
 import {Article} from "../../Components/article/Article";
-import {articlesInfo} from "../../data/data";
-import {articleReducer} from "../../state/article-reducer";
+import {articleReducer, articlesInfoType} from "../../state/article-reducer";
 
 type PropsType = {
     randomChange:boolean;
     setRandomChange: Dispatch<SetStateAction<boolean>>
+    articlesInfo:articlesInfoType
 }
 
 function Content(props: PropsType) {
     console.log("rendering content")
-    const [articles, dispatch] = useReducer(articleReducer, articlesInfo);
+    const [articles, dispatch] = useReducer(articleReducer, props.articlesInfo);
     let random_boolean = ()=> Math.random() < 0.5;
     const asCode = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/2048px-BMW_logo_%28gray%29.svg.png"
     const erCode = "  https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_the_Romani_people.svg/375px-Flag_of_the_Romani_people.svg.png"

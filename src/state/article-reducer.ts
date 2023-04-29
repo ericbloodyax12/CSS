@@ -1,6 +1,6 @@
 import {articlesInfo} from "../data/data";
 
-type articlesInfoType = typeof articlesInfo;
+export type articlesInfoType = typeof articlesInfo;
 
 const CHANGE_TITLE = "CHANGE_TITLE";
 const CHANGE_TEXT = "CHANGE_TEXT";
