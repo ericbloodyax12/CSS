@@ -1,7 +1,7 @@
 import React, {Dispatch, useState} from 'react';
 import "./modal.scss"
 import {ActionArticleType, articleReducer, changeTextAC, changeTitleAC} from "../state/article-reducer";
-import {articlesInfo} from "../data/data";
+
 
 type ModalPropsType = {
     id: number

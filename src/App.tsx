@@ -33,7 +33,7 @@ function App() {
     }, [])
     return (
         <div className="App">
-            <MemoizedMenu count={count} inc={memoizedMenuCallBack} />
+            <MemoizedMenu count={count} inc={memoizedMenuCallBack}/>
             <MemoizedContent randomChange={randomChange} setRandomChange={setRandomChange} articlesInfo={articles}/>
             <Footer/>
 
