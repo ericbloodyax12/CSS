@@ -8,7 +8,7 @@ const CHANGE_TEXT = "CHANGE_TEXT";
 type changeTitleActionType = ReturnType<typeof changeTitleAC>;
 type changeTextActionType = ReturnType<typeof changeTextAC>;
 export type ActionArticleType = changeTitleActionType | changeTextActionType;
-export const articleReducer = (state: articlesInfoType, action: ActionArticleType): articlesInfoType => {
+export const articleReducer = (state: articlesInfoType = articlesInfo  , action: ActionArticleType): articlesInfoType => {
     switch (action.type) {
         case CHANGE_TITLE: {
             return state.map(a => a.id === action.payload.id ? {...a, title: action.payload.title} : a)
@@ -17,7 +17,8 @@ export const articleReducer = (state: articlesInfoType, action: ActionArticleTyp
             return state.map(a => a.id === action.payload.id ? {...a, text: action.payload.text} : a)
         }
         default:
-            throw Error("error")
+            return state
+            // throw Error("error")
     }
 }
 

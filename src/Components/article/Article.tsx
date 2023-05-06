@@ -35,7 +35,12 @@ export function Article(props: ArticlePropsType) {
             <div className={"article__actions"}>
                 <Button id={props.id} buttonText={props.buttonText} title={props.title}/>
             </div>
-            <Modal id={props.id} text={props.text} img={props.img} dispatch={props.dispatch} title={props.title} />
+            <Modal id={props.id}
+                   text={props.text}
+                   img={props.img}
+                   dispatch={props.dispatch}
+                   title={props.title}
+            />
         </div>
 
     );
