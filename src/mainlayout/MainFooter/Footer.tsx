@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './footer.css';
-type PropsType = {
+import {MemoizedConditionalUITest} from "./conditional-ui-test/ConditionalUITest";
+type FooterPropsType = {
 
 }
 
-function Footer(props: PropsType) {
+function Footer(props: FooterPropsType) {
+    const [stateCondition, setStateCondition] = useState("default")
+    const [onClickState, setOnClickState] = useState("")
+    const onclickHandler = (e:any) => {
+        setOnClickState(stateCondition)
+    };
 
     return (
         <div className={'footer-container'}>
-        There will be blood
+        <input type={"text"} value={stateCondition} onChange={(e) => {
+            setStateCondition(e.currentTarget.value)
+        }}/>
+            <MemoizedConditionalUITest condition={onClickState}/>
+            <button onClick={onclickHandler}>+</button>
         </div>
     );
 }

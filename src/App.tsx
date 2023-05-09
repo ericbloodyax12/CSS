@@ -1,7 +1,7 @@
 import React, {useCallback, useMemo, useState} from 'react';
 import './App.scss';
 import {MemoizedMenu} from "./mainlayout/header/Menu";
-import {MemoizedContent} from "./mainlayout/main content/Content";
+import {MemoizedContent} from "./mainlayout/main-content/Content";
 import Footer from "./mainlayout/MainFooter/Footer";
 import {articlesInfo} from "./data/data";
 
