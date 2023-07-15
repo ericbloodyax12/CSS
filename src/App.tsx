@@ -4,6 +4,7 @@ import {MemoizedMenu} from "./mainlayout/header/Menu";
 import {MemoizedContent} from "./mainlayout/main-content/Content";
 import Footer from "./mainlayout/MainFooter/Footer";
 import {articlesInfo} from "./data/data";
+import {Users} from "./Components/users/Users";
 
 type PropsType = {
     name?: string;
@@ -34,7 +35,7 @@ function App() {
     return (
         <div className="App">
             <MemoizedMenu count={count} inc={memoizedMenuCallBack}/>
-            <MemoizedContent randomChange={randomChange} setRandomChange={setRandomChange} articlesInfo={articles}/>
+            <MemoizedContent randomChange={randomChange} setRandomChange={setRandomChange} articlesInfo={articles} />
             <Footer/>
 
         </div>

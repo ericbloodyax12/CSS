@@ -5,6 +5,7 @@ import {Article} from "../../Components/article/Article";
 import {articleReducer, articlesInfoType} from "../../state/article-reducer";
 import {useDispatch, useSelector} from "react-redux";
 import {CreateStoreType} from "../../state/store";
+import {Users} from "../../Components/users/Users";
 
 type PropsType = {
     randomChange:boolean;
@@ -39,6 +40,9 @@ function Content(props: PropsType) {
                 random png <button className={"articles-blocks__button btn-1"} onClick={(e)=> props.setRandomChange(random_boolean())}>+</button>
                <img src={props.randomChange ? asCode : erCode}/>
                 {articlesJSX}
+            </div>
+            <div>
+                <Users />
             </div>
         </div>
     );
